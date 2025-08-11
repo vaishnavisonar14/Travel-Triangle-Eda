@@ -1,73 +1,95 @@
-# Travel-Triangle-Eda
-
+🏝 Travel Triangle EDA Project
 📌 Project Overview
-This project performs web scraping and Exploratory Data Analysis (EDA) on travel packages from Travel Triangle, a tourism booking platform.
-The goal is to scrape travel package details, clean and process the data, detect anomalies, and analyze pricing and package trends.
+- This project involves web scraping travel package data from TravelTriangle and performing Exploratory Data Analysis (EDA) to understand pricing trends, discounts, destinations, and package highlights.
+The goal is to extract structured data from multiple categories such as Family, Adventure, and Beach tour packages, clean and analyze it, and present insights for travel market understanding.
 
-🔍 Project Steps
-1. Web Scraping
-Used Python with requests and BeautifulSoup to scrape multiple pages of travel package data.
+📊 Features
+- Web Scraping: Automated extraction of travel package details using requests and BeautifulSoup.
 
-Extracted:
+- Data Cleaning: Removing duplicates, handling missing values, and standardizing formats.
 
-- Package Title
+- Exploratory Data Analysis:
 
-- Duration
+- Price distribution analysis
 
-- Discount
+- Discount trends
 
-- Discounted Price
+- Popular destinations
 
-- Original Price
+- Duration vs. price comparison
 
-- Location
+- Multi-category scraping: Family, Adventure, and Beach packages.
 
-- Highlights
+🛠 Tech Stack
+- Python 🐍
 
-- Implemented pagination to scrape up to 8 pages of results.
+- Libraries:
 
-2. Data Cleaning
-- Converted extracted lists into a Pandas DataFrame.
+requests – Fetching HTML content
 
-- Removed null/missing values.
+BeautifulSoup – Parsing HTML
 
-- Corrected data types for numeric columns.
+pandas – Data storage, cleaning, and analysis
 
-- Removed duplicates.
+- matplotlib & seaborn – Visualization
 
-3. Outlier Detection
-- Identified unusually high standard deviation in:
+- 📂 Dataset
+- The dataset contains:
 
-- Discount Price
+1.Package Title
 
-- Original Price
+2.Duration
 
-- Amount Saved
+3.Discount %
 
-- Detected negative values in “Amount Saved” (likely incorrect).
+4.Discounted Price
 
-4. Exploratory Data Analysis
-- Generated descriptive statistics (mean, median, min, max).
+5.Original Price
 
-- Visualized distributions of prices and discounts.
+6.Location
 
-- Compared original vs discounted prices.
+7.Highlights
 
-- Analyzed top locations and popular durations.
+8.Source Category
 
-🛠 Tools & Libraries
-- Python (Jupyter Notebook)
+- 📏 Size: ~500+ rows (from 3 package categories × multiple pages)
 
-- requests, BeautifulSoup — web scraping
+- 🔍 Steps Performed
+Data Collection
 
-- pandas, numpy — data cleaning & analysis
+- Scraped up to 8 pages for each travel theme (Family, Adventure, Beach).
 
-- matplotlib, seaborn — visualization
+- Extracted titles, durations, discounts, prices, locations, and highlights.
 
-📈 Key Insights
-- Some packages had negative savings due to data inconsistencies.
+- Data Cleaning
 
-- Price distributions showed high variability — likely due to different package types.
+- Removed duplicates
 
-- Certain destinations appeared more frequently, showing higher popularity.
+- Converted prices to numerical format
+
+- Standardized durations
+
+- Exploratory Data Analysis
+
+- Price and discount distribution
+
+- Most visited destinations
+
+- Relationship between package duration and cost
+
+- Visualization
+
+- Bar charts for top destinations
+
+- Price vs. Duration scatter plots
+
+- Discount % distribution plots
+
+- 📈 Insights
+- Certain destinations consistently offer higher discounts.
+
+- Longer durations generally correlate with higher prices, but exceptions exist.
+
+- Beach packages showed more seasonal discounts compared to Family packages.
+
 
